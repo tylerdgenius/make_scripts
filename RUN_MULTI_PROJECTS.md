@@ -21,3 +21,10 @@ brew install tmux
 
 # Ubuntu/Debian
 sudo apt install tmux
+```
+
+## 📂 Customize Your Project Paths
+
+Update the Makefile with your actual service folders.
+
+Example structure:
