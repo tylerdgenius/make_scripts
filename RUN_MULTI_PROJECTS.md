@@ -28,3 +28,9 @@ sudo apt install tmux
 Update the Makefile with your actual service folders.
 
 Example structure:
+
+```bash
+project-root/
+├── service-a/
+└── service-b/
+```
