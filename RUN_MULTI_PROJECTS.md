@@ -23,7 +23,7 @@ brew install tmux
 sudo apt install tmux
 ```
 
-## 📂 Customize Your Project Paths
+### 📂 Customize Your Project Paths
 
 Update the Makefile with your actual service folders.
 
@@ -33,4 +33,15 @@ Example structure:
 project-root/
 ├── service-a/
 └── service-b/
+```
+Replace service-a and service-b below with your actual directories.
+
+### 🧾 Makefile Target
+
+```make
+run-app:
+	tmux new-session -d -s devsession 'cd service-a && export NVM_DIR="$$HOME/.nvm" && source $$NVM_DIR/nvm.sh && nvm use 20 && pnpm start:dev'
+	tmux split-window -v -t devsession 'cd service-b && export NVM_DIR="$$HOME/.nvm" && source $$NVM_DIR/nvm.sh && nvm use 20 && pnpm start:dev'
+	tmux select-layout -t devsession tiled
+	tmux attach -t devsession
 ```
