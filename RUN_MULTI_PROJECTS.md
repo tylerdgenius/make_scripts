@@ -55,8 +55,8 @@ make run-app
 ```
 
 This will:
--- Start a new tmux session named devsession
--- Open a pane for each service
--- Run pnpm start:dev in each
--- Attach you to the session
+- Start a new tmux session named devsession
+- Open a pane for each service
+- Run pnpm start:dev in each
+- Attach you to the session
 
